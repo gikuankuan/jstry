@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS初體驗</title>
+  </head>
+  <body>
+    <h1>12333</h1>
+    <script>
+      aa = 100;
+      //   alert(aa); //呼叫提示視窗函式(舊的東西)
+      console.log(aa); //要求寫到console的函式(新觀念)
+
+      function hi(name) {
+        // alert(`hello ${name}`);
+      }
+
+      word1 = function () {
+        console.log("HELLO"); //結構函式變數1
+      };
+
+      word2 = function () {
+        console.log("HELLO"); //結構函式變數2
+      };
+
+      function say(who) {
+        who(); //負責將接收到的變數做()執行
+      }
+
+      //say 是函數，word1 word2 是變數,who是函式say內的變數
+
+      say2 = (function () {
+        console.log("this is say2");
+        return "done";
+      })();
+
+      //this 函式
+
+      function showThis() {
+        console.log(this.mycard);
+      }
+      mycard = "紅心A";
+
+      myobj = {};
+
+      function num(b = 100) {
+        console.log(b);
+      }
+
+      // --------------------------
+      myVar1 = "臨時變數";
+      var myvar2 = "全域變數";
+      let myvar3 = "區域內的獨立變數";
+      const myvar4 = "常態變數";
+
+      d = 123;
+      function test() {
+        console.log(d);
+      }
+      test();
+      // delete d;
+      console.log(d);
+
+      let e = 3,
+        t = 4,
+        g = 5;
+
+      var a = 1,
+        b = 2,
+        c = 3;
+      console.log(a, b, c);
+
+      for (i = 1, j = 10; i < 11; i++, j--) {
+        for (i = 1, j = 10; i < 11; i++, j--) {
+          console.log(`*`);
+        }
+      }
+    </script>
+  </body>
+</html>
