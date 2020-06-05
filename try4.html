@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>常用到的物件函式</title>
+  </head>
+  <body>
+    <h1>常用到的物件函式</h1>
+    <script>
+      var data=[123,456,789];
+      console.log(data.length);
+
+
+      data.forEach(
+      (val)=>console.log(val)
+      );
+
+      var txt="hello word!";
+      console.log(txt.length);
+
+
+console.log()
+
+Math.round(6.4);//四捨五入
+Math.ceil(6.4);//無條件進
+Math.floor(6.4);//無條件捨
+Math.random();//隨機 0<x<1 之浮點數
+Math.floor(Math.random()*15); //利用變 15 倍，得到 0<x<15 之間浮點數，在無條件捨去得到 0~14 隨機整數
+
+/*如果想要範圍 50~80
+  =>Math.floor(Math.random()*31); 0~30
+  =>Math.floor(Math.random()*31)+50; //50~80
+  =>寫成 FUNCTION
+*/
+function myrand(min,max){
+  return Math.floor(Math.random()*(max-min+1))+min; //min~max
+}
+
+n= Math.floor(Math.random()*41+40);
+
+function random(max,mix){
+   Math.floor(Math.random(max,mix)*41+40);
+    console.log(n);
+}
+
+var time=new Date(); //get obj
+var time_str=new Date(); //get str
+
+var ctime=new Date(2020,12,02,03,40,59);
+var ctime2=new Date("2020-12-31T23:59:59");
+
+time.getFullYear();//西元
+time.getMonth()+1;//月
+time.getDate();//日
+time.getDay();//星期幾
+time.getHours()//小時
+time.getMinutes();//分
+time.getSeconds();
+
+var beto=(ctime2.getTime()-time.getTime());
+
+let x = Math.floor(beto/86400000);
+let y = Math.floor(beto/3600000)-(x*24);//剪掉剩餘天數的總小時
+let z = Math.floor(beto/60000)-(x*24*60)-(y*60);//剪掉剩餘天數的總分鐘
+let k = Math.floor(beto/60000)-(x*24*60)-(y*60);
+
+
+console.log(`距離今年跨年只剩下${x}天${y}時${z}分${k}秒`);
+
+
+
+
+    </script>
+  </body>
+</html>

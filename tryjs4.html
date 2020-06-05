@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>陣列與物件</h1>
+    <script>
+             let ary=new Array();
+             for (let i=0;i<11;i++){
+                 ary.push(i);
+             }
+
+            function showary(s1,s2){
+                console.log(s1,s2);
+            }
+            ary.forEach(showary);
+
+            ary.forEach(function(s1,s2){console.log(s1,s2)});
+
+            //data陣列適合拿來做資料管理，DAT物件式和作戰存存取
+
+            let obj={
+                cat:"加菲貓",
+                dog:"史努比"
+                };
+
+                //josn格式
+    </script>
+  </body>
+</html>
